@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "biotools"
+version = "0.2.0"
+description = "Dependency-light FASTA/FASTQ parsing, validation and sequence statistics"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Tilak Sharma", email = "tilaksharma273@gmail.com"}]
+keywords = ["bioinformatics", "fasta", "fastq", "genomics", "sequence-analysis"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov"]
+
+[project.scripts]
+biotools = "biotools.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/TilakSharma07/Bioinformatics-Tools-Python"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
